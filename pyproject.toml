@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-ml-platform"
+version = "1.0.0"
+description = "From-scratch graph ML platform: node classification, link prediction and node embeddings on a synthetic community graph, with a versioned registry, gated champion promotion, latency-budgeted serving and embedding-drift monitoring."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "httpx>=0.27",
+]
+
+[tool.setuptools]
+packages = ["graphml"]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
